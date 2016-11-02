@@ -1,0 +1,14 @@
+<GridLayout>
+  <RadSideDrawer exampleTitle toggleNavButton>
+        <StackLayout tkDrawerContent class="sideStackLayout">
+            <StackLayout>
+                <sidedrawermenu></sidedrawermenu>
+            </StackLayout>
+            
+        </StackLayout>
+        <StackLayout tkMainContent>
+            <Label [text]="mainContentText" textWrap="true" class="drawerContentText"></Label>
+            <Button text="OPEN DRAWER" (tap)=openDrawer()></Button>
+        </StackLayout>
+    </RadSideDrawer>
+</GridLayout>
