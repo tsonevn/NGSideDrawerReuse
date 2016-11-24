@@ -3,6 +3,7 @@ import { platformNativeScriptDynamic, NativeScriptModule } from "nativescript-an
 import { NgModule } from "@angular/core";
 import { AppComponent } from "./app.component";
 import { SIDEDRAWER_DIRECTIVES } from "nativescript-telerik-ui/sidedrawer/angular";
+import { LISTVIEW_DIRECTIVES } from "nativescript-telerik-ui/listview/angular";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { routes } from "./app.routes";
 import { SideDrawerComponent } from './components/sidedrawermenu.component'
@@ -10,7 +11,7 @@ import { FirstComponent } from "./first.component";
 import { SecondComponent } from "./second.component";
 
 @NgModule({
-    declarations: [AppComponent, SIDEDRAWER_DIRECTIVES, SideDrawerComponent, FirstComponent, SecondComponent],
+    declarations: [AppComponent, SIDEDRAWER_DIRECTIVES, LISTVIEW_DIRECTIVES, SideDrawerComponent, FirstComponent, SecondComponent],
     entryComponents: [FirstComponent, SecondComponent],
     bootstrap: [AppComponent],
     imports: [NativeScriptModule,

@@ -1,0 +1,35 @@
+<GridLayout>
+            <RadSideDrawer exampleTitle toggleNavButton drawerLocation="Bottom">
+                    <StackLayout tkDrawerContent class="sideStackLayout">
+                        <StackLayout>
+                            <StackLayout height="50">
+                                <Label text="Close" textWrap="true"></Label>
+                                
+                            </StackLayout>
+                            <ScrollView orientation="horizontal">
+                                <GridLayout rows="" columns="150 150">
+                                    <ListView col="0" [items]="countries" class="list-group" (itemTap)="onItemTap($event)">
+                                        <template let-country="item" let-i="index" let-odd="odd" let-even="even">
+                                            <GridLayout class="list-group-item">
+                                                <Label [text]="country.name"></Label>
+                                            </GridLayout>
+                                        </template>
+                                    </ListView>
+                                    <ListView col="1"  [items]="countries" class="list-group" (itemTap)="onItemTap($event)">
+                                        <template let-country="item" let-i="index" let-odd="odd" let-even="even">
+                                            <GridLayout class="list-group-item">
+                                                <Label [text]="country.name"></Label>
+                                            </GridLayout>
+                                        </template>
+                                    </ListView>
+                                </GridLayout>
+                            </ScrollView>
+                            
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout tkMainContent>
+                        <Label text="Second page" textWrap="true" class="drawerContentText"></Label>
+                        <Button text="OPEN DRAWER" (tap)=openDrawer()></Button>
+                    </StackLayout>
+                </RadSideDrawer>
+            </GridLayout>
